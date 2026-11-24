@@ -156,10 +156,7 @@ This repository represents an academic/portfolio project and should not be used 
 
 - The checked-in backend security configuration currently permits all requests. JWT-related classes are present, but the filter is not wired into the active security filter chain in the inspected configuration.
 - Role-based authorization and server-side ownership checks need to be enforced before treating NGO and donor routes as protected.
-- Password storage and authentication should be reviewed; use a password encoder such as BCrypt and avoid returning password fields in API responses.
-- Move database credentials and JWT signing keys to environment variables. Rotate any credential that has ever been committed to the repository, and remove it from Git history where appropriate.
 - Add request validation, consistent exception handling, transaction boundaries and automated tests.
-- The frontend currently has a hard-coded local API URL.
 - The current frontend donation form sends a contribution request; it is not a payment-gateway integration. A successful API contribution record should not be described as a real payment.
 
 ## Suggested next improvements
